@@ -1,7 +1,9 @@
+import * as S from './style';
+
 export const Main = () => {
     return (
-        <main>
+        <S.Container>
             <h1>Won Games</h1>
-        </main>
+        </S.Container>
     );
 };
