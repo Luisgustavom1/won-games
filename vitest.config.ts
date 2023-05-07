@@ -12,9 +12,10 @@ export default defineConfig({
         environment: 'jsdom',
         setupFiles: './test/setup.ts',
         css: true,
+        include: ['src/components/**/*.spec.tsx'],
         coverage: {
             provider: 'istanbul',
-            include: ['src/**'],
+            include: ['src/**/*'],
             exclude: ['src/app/*'],
         },
         bail: 1,
