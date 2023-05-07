@@ -1,3 +1,4 @@
+import StyledComponentsRegistry from '@/lib/styled-components-registry';
 import { GlobalStyles } from '@/styles/global';
 import { Metadata } from 'next';
 
@@ -13,10 +14,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <head></head>
-
-            <body>{children}</body>
-
+            <body>
+                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </body>
             <GlobalStyles />
         </html>
     );
