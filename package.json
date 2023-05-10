@@ -11,7 +11,8 @@
     "test:watch": "yarn test --watch",
     "test:ci": "vitest run --coverage --config ./vitest.config.ts --single-thread --passWithNoTests",
     "storybook": "storybook dev -s ./public -p 6006",
-    "build-storybook": "storybook build -s ./public "
+    "build-storybook": "storybook build -s ./public",
+    "generate-component": "yarn plop --plopfile generators/plopFile.mjs"
   },
   "dependencies": {
     "next": "12.3",
@@ -48,6 +49,7 @@
     "jest-styled-components": "^7.1.1",
     "jsdom": "^22.0.0",
     "lint-staged": "^13.2.2",
+    "plop": "^3.1.2",
     "prettier": "2.8.8",
     "storybook": "^7.0.9",
     "typescript": "5.0.4",
