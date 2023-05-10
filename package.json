@@ -9,7 +9,9 @@
     "lint": "next lint --max-warnings=0",
     "test": "vitest run --coverage --config ./vitest.config.ts",
     "test:watch": "yarn test --watch",
-    "test:ci": "vitest run --coverage --config ./vitest.config.ts --single-thread --passWithNoTests"
+    "test:ci": "vitest run --coverage --config ./vitest.config.ts --single-thread --passWithNoTests",
+    "storybook": "storybook dev -s ./public -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "next": "12.3",
@@ -18,6 +20,12 @@
     "styled-components": "^6.0.0-rc.1"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.9",
+    "@storybook/addon-interactions": "^7.0.9",
+    "@storybook/blocks": "^7.0.9",
+    "@storybook/nextjs": "^7.0.9",
+    "@storybook/react": "^7.0.9",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/node": "20.1.0",
@@ -34,11 +42,13 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.3",
     "jest-styled-components": "^7.1.1",
     "jsdom": "^22.0.0",
     "lint-staged": "^13.2.2",
     "prettier": "2.8.8",
+    "storybook": "^7.0.9",
     "typescript": "5.0.4",
     "vitest": "^0.31.0"
   }
