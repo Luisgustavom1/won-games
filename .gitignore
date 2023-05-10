@@ -41,3 +41,6 @@ yarn.lock
 # pwa
 public/sw.js
 public/workbox-*.js
+
+# storybook
+storybook-static
