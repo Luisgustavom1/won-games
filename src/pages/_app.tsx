@@ -7,9 +7,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <>
             <Head>
                 <title>React Avançado - Boilerplate</title>
-                <link rel="shortcut icon" href="/img/icon-512.png" />
-                <link rel="apple-touch-icon" href="/img/icon-512.png" />
+
                 <meta name="description" content="Boilerplate with next 13" />
+                <meta name="theme-color" content="#06092B" />
+
+                <link rel="shortcut icon" href="assets/img/icon-512.png" />
+                <link rel="apple-touch-icon" href="assets/img/icon-512.png" />
+                <link rel="manifest" href="/manifest.json" />
             </Head>
 
             <Component {...pageProps} />
