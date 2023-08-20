@@ -1,0 +1,21 @@
+{
+    "name": "Won games",
+    "short_name": "Won games",
+    "icons": [
+        {
+          "src": "assets/img/icon-192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "assets/img/icon-512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+    ],
+    "background_color": "#06092B",
+    "description": "Ecommerce usando react e algumas tecnologias comuns do dia a dia de um dev",
+    "display": "fullscreen",
+    "start_url": "/",
+    "theme_color": "#06092B"
+}
