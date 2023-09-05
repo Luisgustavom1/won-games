@@ -1,9 +1,10 @@
 import { Button } from '@/components/Button';
 import { render, screen } from '@/utils/tests';
+import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart';
 
 describe('<Button />', () => {
     it('should render the medium size by default', () => {
-        render(<Button>Buy now</Button>);
+        const { container } = render(<Button>Buy now</Button>);
 
         const button = screen.getByRole('button', { name: /Buy now/i });
 
@@ -11,6 +12,8 @@ describe('<Button />', () => {
         expect(button).toHaveStyleRule('height', '4rem');
         expect(button).toHaveStyleRule('padding', '0.8rem 3.2rem');
         expect(button).toHaveStyleRule('font-size', '1.4rem');
+
+        expect(container.firstChild).toMatchSnapshot();
     });
 
     it('should render the small size', () => {
@@ -39,5 +42,15 @@ describe('<Button />', () => {
         expect(
             screen.getByRole('button', { name: /Buy now/i }),
         ).toHaveStyleRule('width', '100%');
+    });
+
+    it('should render an icon version', () => {
+        render(
+            <Button icon={<AddShoppingCart data-testid="icon" />}>
+                Buy now
+            </Button>,
+        );
+
+        expect(screen.getByText(/Buy now/i)).toBeInTheDocument();
     });
 });
